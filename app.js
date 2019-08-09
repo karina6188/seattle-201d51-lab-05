@@ -28,8 +28,10 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-
+function multiply(a, b) { 
+  var sum = a * b;
+  var message = ['The product of ' + a + 'and' + b + 'is' + sum];
+  return [sum,message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
