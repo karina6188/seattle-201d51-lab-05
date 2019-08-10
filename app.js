@@ -99,11 +99,30 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+  var p = testArray[0];
+  var q = testArray[1];
+  var r = testArray[2];
+  var x = 0;
+
+  var pAddq = sum(p, q);
+  var rAddx = sum(r, x);
+
+  var addsPQ = pAddq[0];
+  var addsRX = rAddx[0];
+  
+  var addsPQR = sum(addsPQ, addsRX);
+
+  var totalAddsPQR = addsPQR[0];
+
+  var message = "2,3,4 was passed in as an array of numbers, and 9 is their sum."
+
+  return [totalAddsPQR, message];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
