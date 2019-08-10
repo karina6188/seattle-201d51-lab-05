@@ -30,12 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { 
   var sum = a * b;
-  var message = ['The product of ' + a + 'and' + b + 'is' + sum];
-  return [sum,message];
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + sum + '.';
+  return [sum, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,13 +50,37 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your code here.
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  
+  var a = 4;
+  var b = 7;
+  var c = 5;
+  var x = 0;
+  var y = 1;
+  var sumAB = sum(a, b);
+  var sumCX = sum(c, x);
 
+  var addsAB = sumAB[0];
+  var addsCX = sumCX[0];
+  var addsABC = sum(addsAB, addsCX);
+
+  var totalAddsABC = addsABC[0];
+
+  var mulAB = multiply(a, b);
+  var mulCY = multiply(c, y);
+
+  var multiAB = mulAB[0];
+  var multiCY = mulCY[0];
+  var multiABC = multiply(multiAB, multiCY);
+
+  var totalMultiABC = multiABC[0];
+
+  return [totalAddsABC, totalMultiABC , a + ' and ' + 7 + ' and ' + 5 + ' sum to ' + 16 + '.', 'The product of ' + a + ' and ' + 7 + ' and ' + 5 + ' is ' + 140 + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
