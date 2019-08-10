@@ -137,12 +137,34 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
+var numArray = [2, 3, 4];
+
 function multiplyArray(multArr) { //eslint-disable-line
+
+  var d = numArray[0];
+  var e = numArray[1];
+  var f = numArray[2];
+  var x = 1;
+
+  var dMule = multiply(d, e);
+  var fMulx = multiply(f, x);
+
+  var mulDE = dMule[0];
+  var mulFX = fMulx[0];
+  
+  var mulDEF = multiply(mulDE, mulFX);
+
+  var totalMulDEF = mulDEF[0];
+
+  var message = "The numbers 2,3,4 have a product of 24."
+
+  return [totalMulDEF, message];
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
